@@ -1,0 +1,11 @@
+# api server port
+port: 45000
+
+#available modules
+hostInfo: true
+cpu: true
+ram: true
+disks: true
+networkDevices: true
+networkBandwidth: true
+processes: true

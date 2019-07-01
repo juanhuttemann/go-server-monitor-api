@@ -24,4 +24,4 @@ go build src/*.go
 ./main
 ```
 
-Then go to your web browser at [http:\\localhost:3000](http:\\localhost:3000)
+Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)

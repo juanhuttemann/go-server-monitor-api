@@ -1,4 +1,4 @@
-# api-monitor-go
+# go-server-monitor-api
 
 Gathers and Publish information about the Hardware, OS, Network and Processes of the current running machine through a JSON API (Linux & Windows Compatible)
 

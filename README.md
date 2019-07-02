@@ -29,4 +29,4 @@ Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)
 
 ### Custom Settings
 
-For custom setting just edit the config.yml file changing the values by true of false
+For custom settings just edit the config.yml file changing the values by true or false

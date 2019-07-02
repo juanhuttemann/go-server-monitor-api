@@ -2,6 +2,8 @@
 
 Gathers and Publish information about the Hardware, OS, Network and Processes of the current running machine through a JSON API (Linux & Windows Compatible)
 
+![preview](https://raw.githubusercontent.com/juanhuttemann/go-server-monitor-api/master/images/preview.png)
+
 #### Dependencies 
 
 ```sh

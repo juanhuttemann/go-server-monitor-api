@@ -21,7 +21,7 @@ go get github.com/spf13/viper
 go build src/*.go
 ```
 
-### Usage
+#### Usage
 
 
 ```sh

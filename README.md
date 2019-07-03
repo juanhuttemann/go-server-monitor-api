@@ -60,7 +60,13 @@ Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)
 
 ### Custom Settings
 
-For custom settings just edit the config.yml file changing the values by **true** or **false**
+#### Webserver API Port
+
+By default, the embedded server start on port 3000. We can provide a different value in an config.yml file:
+
+#### Modules
+
+For enabling/disabling modules just edit the config.yml file changing the values by **true** or **false**
     
        
        

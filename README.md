@@ -43,9 +43,9 @@ For custom settings just edit the config.yml file changing the values by true or
 
 ### JSON Data References
 
-- hostInfo
-       * name (string): Host name
-       * os (string): Operative System
-       * arch (string): x86/x64
-       * uptime (integer): amount of seconds since bootup
+* hostInfo
+    * name (string): Host name
+    * os (string): Operative System
+    * arch (string): x86/x64
+    * uptime (integer): amount of seconds since bootup
        

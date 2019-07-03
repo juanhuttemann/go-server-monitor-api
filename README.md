@@ -43,7 +43,7 @@ For custom settings just edit the config.yml file changing the values by true or
 
 ### JSON Data References
 
-* hostInfo
+* hostInfo (object)
     * name (string): Host name
     * os (string): Operative System
     * arch (string): x86/x64

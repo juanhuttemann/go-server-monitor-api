@@ -75,13 +75,13 @@ For enabling/disabling modules just edit the config.yml file changing the values
 
 ```
 #available modules
-hostInfo: **true**
-cpu: **true**
-ram: **true**
-disks: **true**
-networkDevices: **false**
-networkBandwidth: **true**
-processes: **false**
+hostInfo: true
+cpu: true
+ram: true
+disks: true
+networkDevices: false
+networkBandwidth: true
+processes: false
 ```
        
        

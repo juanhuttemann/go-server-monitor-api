@@ -72,6 +72,16 @@ port: 45000
 #### Modules
 
 For enabling/disabling modules just edit the config.yml file changing the values by **true** or **false**
-    
+
+```
+#available modules
+hostInfo: true
+cpu: true
+ram: true
+disks: true
+networkDevices: false
+networkBandwidth: true
+processes: false
+```
        
        

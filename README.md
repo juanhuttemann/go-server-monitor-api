@@ -43,15 +43,23 @@ For custom settings just edit the config.yml file changing the values by **true*
 
 ### JSON Data References
 
-* hostInfo (object)
+* **hostInfo** (object)
     * name (string): Host name
     * os (string): Operative System
     * arch (string): x86/x64
     * uptime (integer): amount of seconds since bootup
-* cpu (object)
+    
+* **cpu** (object)
     * name (string): Brand - Model of the Physical CPU
     * total (integer): Amount of Physical Cores
     * usage (float): Percentage of Physical CPU Usage
     * usagePerCore (Array): Array of Percentage of Logical CPU Usage
+    
+* **ram** (object)
+    * free (integer): Available Physical RAM in bytes
+    * total (integer): Total of Physical RAM in bytes
+    * usage (integer): Usage of Physical RAM in bytes
+
+    
        
        

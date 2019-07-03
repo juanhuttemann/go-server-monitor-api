@@ -4,6 +4,13 @@ Gathers and Publish information about the Hardware, OS, Network and Processes of
 
 ![preview](https://raw.githubusercontent.com/juanhuttemann/go-server-monitor-api/master/images/preview.png)
 
+
+#### Clone 
+
+```sh
+git clone git@github.com:juanhuttemann/go-server-monitor-api.git
+```
+
 #### Dependencies 
 
 ```sh
@@ -22,7 +29,6 @@ go build src/*.go
 ```
 
 #### Usage
-
 
 ```sh
 ./main

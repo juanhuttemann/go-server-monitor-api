@@ -64,6 +64,11 @@ Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)
 
 By default, the embedded server start on port 3000. We can provide a different value in an config.yml file:
 
+```
+# api server port
+port: 45000
+```
+
 #### Modules
 
 For enabling/disabling modules just edit the config.yml file changing the values by **true** or **false**

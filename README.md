@@ -37,6 +37,7 @@ go build src/*.go
 Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)
 
 
+
 ### JSON Data References
 
 * **hostInfo** (object)
@@ -58,7 +59,9 @@ Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)
 
 
 
+
 ### Custom Settings
+
 
 #### Webserver API Port
 

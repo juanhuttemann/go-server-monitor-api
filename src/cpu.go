@@ -44,7 +44,6 @@ func CheckCPU() CPU {
 	cpuChan := make(chan CPU)
 
 	go func(c chan CPU) {
-		fmt.Println("Checking CPU")
 		cpuUsageGeneralChan := make(chan float64)
 		cpuUsagePerCoreChan := make(chan []float64)
 
@@ -70,7 +69,7 @@ func CheckCPU() CPU {
 			re := regexp.MustCompile(`.*model name.*`)
 			matches := re.FindStringSubmatch(string(out))
 
-			cpuName := strings.TrimSpace(strings.Trim(strings.Join(matches, " "), "model name"))
+			cpuName = strings.TrimSpace(strings.Trim(strings.Join(matches, " "), "model name"))
 			cpuName = strings.Trim(cpuName, " :")
 		}
 

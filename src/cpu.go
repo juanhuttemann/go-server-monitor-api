@@ -1,8 +1,10 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os/exec"
+	"regexp"
 	"runtime"
 	"strings"
 	"time"
@@ -42,6 +44,7 @@ func CheckCPU() CPU {
 	cpuChan := make(chan CPU)
 
 	go func(c chan CPU) {
+		fmt.Println("Checking CPU")
 		cpuUsageGeneralChan := make(chan float64)
 		cpuUsagePerCoreChan := make(chan []float64)
 
@@ -57,12 +60,19 @@ func CheckCPU() CPU {
 
 			cpuName = strings.TrimSpace(strings.Trim(string(out), "Name"))
 		} else {
-			command := []string{"/proc/cpuinfo", "|", "grep", "model", "|", "head", "-1"}
+			command := []string{"/proc/cpuinfo"}
 			out, err := exec.Command("cat", command...).Output()
 			if err != nil {
+				fmt.Println("an error has occurred while checking the cpu")
 				log.Fatal(err)
 			}
-			cpuName = strings.TrimSpace(strings.Trim(string(out), "model name"))
+
+			re := regexp.MustCompile(`.*model name.*`)
+			matches := re.FindStringSubmatch(string(out))
+
+			cpuName := strings.TrimSpace(strings.Trim(strings.Join(matches, " "), "model name"))
+			cpuName = strings.Trim(cpuName, " :")
+			fmt.Printf("%q", cpuName)
 		}
 
 		c <- CPU{

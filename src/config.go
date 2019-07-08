@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"os"
 	"reflect"
 	"strconv"
@@ -9,14 +10,17 @@ import (
 )
 
 func init() {
-	installPath := "C:\\deemonitor\\"
-	if _, err := os.Stat(installPath + "config.yml"); os.IsNotExist(err) {
+	runPath, err := os.Getwd()
+	if err != nil {
+		log.Fatal(err)
+	}
+	if _, err := os.Stat(runPath + "/" + "config.yml"); os.IsNotExist(err) {
 		panic("config.yml doesn't exists")
 	}
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
-	viper.AddConfigPath("C:\\deemonitor")
-	err := viper.ReadInConfig()
+	viper.AddConfigPath(runPath)
+	err = viper.ReadInConfig()
 	if err != nil {
 		panic("config file error")
 	}

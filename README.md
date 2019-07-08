@@ -59,8 +59,8 @@ Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)
 
 * **disks** (array of objects)
     * mountPoint (string): Disk current mount path or Unit in Windows 
-    * size (integer): Total Disk spacec in bytes
-    * used (integer): Used Disk spacec in bytes
+    * size (integer): Total Disk space in bytes
+    * used (integer): Used Disk space in bytes
     * percent (integer): Percentage of Disk Usage
 
 

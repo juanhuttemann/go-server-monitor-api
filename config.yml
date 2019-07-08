@@ -1,5 +1,5 @@
 # api server port
-port: 45000
+port: 3000
 
 #available modules
 hostInfo: true

@@ -72,7 +72,6 @@ func CheckCPU() CPU {
 
 			cpuName := strings.TrimSpace(strings.Trim(strings.Join(matches, " "), "model name"))
 			cpuName = strings.Trim(cpuName, " :")
-			fmt.Printf("%q", cpuName)
 		}
 
 		c <- CPU{

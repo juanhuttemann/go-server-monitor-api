@@ -25,13 +25,13 @@ go get github.com/spf13/viper
 #### Build 
 
 ```sh
-go build src/*.go
+go build -o gomonitor src/*.go
 ```
 
 #### Usage
 
 ```sh
-./main
+./gomonitor
 ```
 
 Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)

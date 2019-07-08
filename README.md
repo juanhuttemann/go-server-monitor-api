@@ -57,6 +57,12 @@ Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)
     * total (integer): Total of Physical RAM in bytes
     * usage (integer): Usage of Physical RAM in bytes
 
+* **disks** (array of objects)
+    * mountPoint (string): Disk current mount path or Unit in Windows 
+    * size (integer): Total Disk spacec in bytes
+    * used (integer): Used Disk spacec in bytes
+    * percent (integer): Percentage of Disk Usage
+
 
 
 

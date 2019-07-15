@@ -2,7 +2,8 @@
 
 Gathers and Publish information about the Hardware, OS, Network and Processes of the current running machine through a JSON API (Linux & Windows Compatible)
 
-![preview](https://raw.githubusercontent.com/juanhuttemann/go-server-monitor-api/master/images/preview.png)
+![preview](https://raw.githubusercontent.com/juanhuttemann/go-server-monitor-api/master/images/preview1.png)
+![preview](https://raw.githubusercontent.com/juanhuttemann/go-server-monitor-api/master/images/preview2.png)
 
 
 #### Clone 
@@ -63,7 +64,13 @@ Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)
     * used (integer): Used Disk space in bytes
     * percent (integer): Percentage of Disk Usage
 
-
+* **networkDevices** (array of objects)
+    * name (string): Name of the Network Interface
+    * addresses (array of objects):
+        *cidr (string): Classless Inter-Domain Routing
+        *ip (string): IP Address
+    *mac (string): Mac Address
+    *up (boolean): If the Net Interface is Up or Down
 
 
 ### Custom Settings

@@ -67,8 +67,8 @@ Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)
 * **networkDevices** (array of objects)
     * name (string): Name of the Network Interface
     * addresses (array of objects):
-        *cidr (string): Classless Inter-Domain Routing
-        *ip (string): IP Address
+        * cidr (string): Classless Inter-Domain Routing
+        * ip (string): IP Address
     *mac (string): Mac Address
     *up (boolean): If the Net Interface is Up or Down
 

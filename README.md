@@ -45,6 +45,7 @@ Then go to your web browser at [http:\\\localhost:3000](http:\\localhost:3000)
     * name (string): Host name
     * os (string): Operative System
     * arch (string): x86/x64
+    * platform (string): OS Name, Version and Build
     * uptime (integer): amount of seconds since bootup
     
 * **cpu** (object)

@@ -2,15 +2,40 @@ package main
 
 import (
 	"fmt"
+	"net"
 	"net/http"
+	"strconv"
 )
 
+var availableConfigPort string
+
+func portAvailable(configPort string) {
+	fmt.Println("Setting port to " + configPort)
+	ln, err := net.Listen("tcp", ":"+configPort)
+	if err != nil {
+		fmt.Println("Can't listen on port " + configPort)
+		newConfigPort, errStrConv := strconv.Atoi(configPort)
+		if errStrConv != nil {
+			panic(errStrConv)
+		}
+
+		newConfigPort = newConfigPort + 1
+		newConfigPortString := strconv.Itoa(newConfigPort)
+		portAvailable(newConfigPortString)
+	} else {
+		_ = ln.Close()
+		availableConfigPort = configPort
+	}
+}
+
 func main() {
-	PORT := setPort() //Read port from config.yml
+	configPort := setPort() //Read port from config.yml
 
-	fmt.Println("starting server at port" + PORT)
+	portAvailable(configPort)
 
-	if err := http.ListenAndServe(PORT, nil); err != nil {
-		panic(err)
+	fmt.Println("Starting Server at port " + availableConfigPort)
+
+	if err := http.ListenAndServe(":"+availableConfigPort, nil); err != nil {
+		fmt.Println(err)
 	}
 }

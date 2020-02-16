@@ -8,8 +8,7 @@ import (
 
 //Address of NetworkDevice
 type Address struct {
-	CIDR string `json:"cidr"`
-	IP   string `json:"ip"`
+	IP string `json:"ip"`
 }
 
 type Addresses []Address
@@ -73,8 +72,7 @@ func CheckNetworkDevices() NetworkDevices {
 
 				for _, address := range addresses {
 					addr = append(addr, Address{
-						CIDR: strings.Split(address.String(), "/")[1],
-						IP:   strings.Split(address.String(), "/")[0],
+						IP: strings.Split(address.String(), "/")[0],
 					})
 				}
 

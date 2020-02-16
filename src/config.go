@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"reflect"
@@ -15,7 +16,31 @@ func init() {
 		log.Fatal(err)
 	}
 	if _, err := os.Stat(runPath + "/" + "config.yml"); os.IsNotExist(err) {
-		panic("config.yml doesn't exists")
+		fmt.Println("Config.yml doesn't exists")
+		fmt.Println("Creating config.yml with default values")
+		f, err := os.Create("config.yml")
+		if err != nil {
+			fmt.Println(err)
+			return
+		}
+		_, err = f.WriteString(`# api server port
+port: 3000
+
+#available modules
+hostInfo: true
+cpu: true
+ram: true
+disks: true
+networkDevices: true
+networkBandwidth: true
+processes: true`)
+
+		if err != nil {
+			fmt.Println(err)
+			f.Close()
+			return
+		}
+		f.Close()
 	}
 	viper.SetConfigName("config")
 	viper.SetConfigType("yaml")
@@ -41,9 +66,9 @@ func setPort() string {
 	config := viper.Get("port")
 	if config != nil {
 		if reflect.TypeOf(config).String() == "int" {
-			return ":" + strconv.Itoa(config.(int))
+			return strconv.Itoa(config.(int))
 		}
-		return ":3000"
+		return "3000"
 	}
-	return ":3000"
+	return "3000"
 }
